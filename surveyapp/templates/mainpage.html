@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<style>
+		/* Styling the Body element 
+		i.e. Color, Font, Alignment */
+		h1{
+			color: black;
+			text-align: center;
+			font-weight: bolder;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
+		h2{
+			color: black;
+			text-align: left;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		body {
+			background-image: url("Images/istanbul.webp");
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 600px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input, 
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio 
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #123c69;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			color: white;
+		}
+
+		/*Star Rates*/
+		.rate {
+    		float: left;
+    		height: 46px;
+   			padding: 0 10px;
+  		}
+  		.rate:not(:checked) > input {
+    		position:absolute;
+    		top:-9999px;
+  		}
+  		.rate:not(:checked) > label {
+    		float:right;
+    		width:1em;
+    		overflow:hidden;
+    		white-space:nowrap;
+    		cursor:pointer;
+    		font-size:30px;
+    		color:#ccc;
+  		}
+  		.rate:not(:checked) > label:before {
+    		content: '★ ';
+  		}
+  		.rate > input:checked ~ label {
+    		color: #ffc700;
+  		}
+  		.rate:not(:checked) > label:hover,
+  		.rate:not(:checked) > label:hover ~ label {
+    		color: #deb217;
+  		}
+  		.rate > input:checked + label:hover,
+  		.rate > input:checked + label:hover ~ label,
+  		.rate > input:checked ~ label:hover,
+  		.rate > input:checked ~ label:hover ~ label,
+  		.rate > label:hover ~ input:checked ~ label {
+    		color: #c59b08;
+  		}
+
+
+	</style>
+</head>
+
+<body>
+	<h1>Survey Form</h1>
+
+	<!-- Create Form -->
+	<form id="form"method="post">
+		{% csrf_token %}
+		<!-- Details -->
+		<div class="form-control">
+			<label for="name" id="label-name">
+				Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="name"name="name"
+				placeholder="Enter your name" />
+		</div>
+
+		<div class="form-control">
+			<label for="email" id="label-email">
+				Email
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="email" id="email" name="email"
+				placeholder="Enter your email" />
+		</div>
+
+		<div class="form-control">
+			<label for="phone" id="label-phone">
+				Phone Number
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="phone" maxlength="10" minlength="10" name = "phone"
+				placeholder="Enter your phone number (555-555-5555)" />
+		</div>
+		<h2>From 1 to 5 stars</h2>
+
+		<div class="form-control">
+			<label for="cleanliness" id="label-cleanliness">
+				Cleanliness
+			</label>
+			<div class="rate">
+				<input type="radio" id="star5Clean" name="rateClean" value="5" />
+      			<label for="star5Clean" title="5 Stars">5 stars</label>
+      			<input type="radio" id="star4Clean" name="rateClean" value="4" />
+      			<label for="star4Clean" title="4 Stars">4 stars</label>
+      			<input type="radio" id="star3Clean" name="rateClean" value="3" />
+      			<label for="star3Clean" title="3 Stars">3 stars</label>
+      			<input type="radio" id="star2Clean" name="rateClean" value="2" />
+      			<label for="star2Clean" title="2 Stars">2 stars</label>
+      			<input type="radio" id="star1Clean" name="rateClean" value="1" />
+      			<label for="star1Clean" title="1 Star">1 star</label>
+			</div>
+		</div>
+		<br><br><br>	
+		<div class="form-control">
+			<label for="politeness" id="labe-politeness">
+				Politeness of The Staff
+			</label>
+			<div class="rate">
+				<input type="radio" id="star5Polite" name="ratePolite" value="5" />
+      			<label for="star5Polite" title="5 Stars">5 stars</label>
+      			<input type="radio" id="star4Polite" name="ratePolite" value="4" />
+      			<label for="star4Polite" title="4 Stars">4 stars</label>
+      			<input type="radio" id="star3Polite" name="ratePolite" value="3" />
+      			<label for="star3Polite" title="3 Stars">3 stars</label>
+      			<input type="radio" id="star2Polite" name="ratePolite" value="2" />
+      			<label for="star2Polite" title="2 Stars">2 stars</label>
+      			<input type="radio" id="star1Polite" name="ratePolite" value="1" />
+      			<label for="star1Polite" title="1 Star">1 star</label>
+			</div>
+		</div>
+		<br><br><br>
+		<div class="form-control">
+			<label for="food" id="label-food">
+				Food Quality
+			</label>
+			<div class="rate">
+				<input type="radio" id="star5Food" name="rateFood" value="5" />
+      			<label for="star5Food" title="5 Stars">5 stars</label>
+      			<input type="radio" id="star4Food" name="rateFood" value="4" />
+      			<label for="star4Food" title="4 Stars">4 stars</label>
+      			<input type="radio" id="star3Food" name="rateFood" value="3" />
+      			<label for="star3Food" title="3 Stars">3 stars</label>
+      			<input type="radio" id="star2Food" name="rateFood" value="2" />
+      			<label for="star2Food" title="2 Stars">2 stars</label>
+      			<input type="radio" id="star1Food" name="rateFood" value="1" />
+      			<label for="star1Food" title="1 Star">1 star</label>
+			</div>
+		</div>
+		<br><br><br>
+		<div class="form-control">
+			<label>
+				Would you recommend .....
+			</label>
+			<!-- Input Type Radio Button -->
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" value = "1"
+					name="recommed">Yes
+				</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" value = "-1"
+					name="recommed">No
+				</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio" id="recommed-3" value = "0"
+					name="recommed">Maybe
+				</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label>How did you feel during your trip?
+				<small>(Check all that apply)</small>
+			</label>
+			<!-- Input Type Checkbox -->
+			<label for="inp-1">
+				<input type="checkbox" value="Happy" name="inp">Happy
+				</input>
+			</label>
+			<label for="inp-2">
+				<input type="checkbox" value="Joyful" name="inp">Joyful
+				</input>
+			</label>
+			<label for="inp-3">
+				<input type="checkbox" value = "Excited" name="inp">Excited
+				</input>
+			</label>
+			<label for="inp-4">
+				<input type="checkbox" value = "Relaxed" name="inp">Relaxed 
+				</input>
+			</label>
+			<label for="inp-5">
+				<input type="checkbox" value = "Amused" name="inp">Amused
+				</input>
+			</label>
+			<label for="inp-6">
+				<input type="checkbox" value = "Sadness" name="inp">Sadness
+				</input>
+			</label>
+			<label for="inp-7">
+				<input type="checkbox" value = "React" name="inp">React
+				</input>
+			</label>
+			<label for="inp-8">
+				<input type="checkbox" value = "Frustration" name="inp">Frustration
+				</input>
+			</label>
+			<label for="inp-9">
+				<input type="checkbox" value = "Disappointment" name="inp">Disappointment
+				</input>
+			</label>
+			<label for="inp-10">
+				<input type="checkbox" value = "Irritation" name="inp">Irritation
+				</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment" placeholder="Enter your comment here" cols="20" rows="5"></textarea>
+        </div>
+
+		<!-- Multi-line Text Input Control -->
+		<button type="submit" value="submit">
+			Submit
+		</button>
+	</form>
+	{%block content%}
+
+	{%endblock%}
+</body>
+
+</html>
