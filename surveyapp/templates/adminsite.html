@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {%if user.is_authenticated%}
+    <h1>iyi günler</h1>
+    <form method="post" action="{% url 'logout' %}?next=/login">
+        {% csrf_token %}
+        <button type="submit">logout</button>
+    </form>
+    {%else%}
+    <a type="button" class="btn btn-outline-primary me-2" href = "{%url 'login'%}">Login</a>
+    {%endif%}
+</body>
+</html>

@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from . import models
+from django.contrib.auth.decorators import login_required
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
@@ -25,3 +26,6 @@ def checkboxes(request):
 
 def thanks(request):
     return render(request, 'thanks.html')
+
+def adminsite(request):
+    return render(request, 'adminsite.html')

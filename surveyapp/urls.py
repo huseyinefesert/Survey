@@ -6,4 +6,5 @@ urlpatterns = [
     #path("home", views.home, name='home'),
     path("home", views.checkboxes, name='home'),
     path("thanks", views.thanks, name='thanks'),
+    path("adminsite/", views.adminsite, name='adminsite'),
 ]
