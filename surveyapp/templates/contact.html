@@ -67,30 +67,14 @@
         color: red;
         font-weight: bolder;
       }
-      #login{
-        width: 200px;
-        height: 100px;
-        border-radius: 10px;
-        position: relative;
+      #text{
+        width: 600px;
+        height: 200px;
         margin: auto;
-        margin-top: 100px;
-        padding: 25px;
-        background-color: white;
+        margin-top: 50px;
+        text-align: center;
       }
-      #login button{
-        margin-top: 10px;
-        border-radius: 25px;
-      }
-      #login a{
-        text-decoration: none;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: lightblue;
-        font-size: 12px;
-      }
-      #login a:hover{
-        font-style: italic;
-        font-weight: bold;
-      }
+
 
     </style>
   </head>
@@ -115,18 +99,11 @@
             </li>
           </ul>
         </nav>
-        <div id="login">
-            <form method="POST" action="{%url 'login'%}">
-                <input type="text">
-                <input type="password">
-                <button type="submit" class="btn btn-outline-primary me-2" >Login</button>
-                <br>
-                <br>
-                <a href="{%url 'surveyapp:contact'%}">Forgot your password?</a>
-                <br>
-                <a href="{%url 'surveyapp:contact'%}">Don't have an account? </a>
-            </form>
-        </div>
+        <article id="text">
+            <p>To create a admin account or for password reset actions please contact us</p>
+            <p>E-Mail: example@ex.com</p>
+            <p>Phone Number: +90 555 555 55</p>
+        </article>
     </div>
   </body>
 </html>
