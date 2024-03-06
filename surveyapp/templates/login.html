@@ -111,14 +111,14 @@
             <li>
               <a href="{%url 'surveyapp:contact'%}">Contact Informations</a>
             </li>
-            {%if user.is_authenticated%}
-            {%else%}
+            
             <li>
               <a href="{%url 'login'%}">Login</a>
             </li>
-            {%endif%}
+            
           </ul>
         </nav>
+        
         <div id="login">
             <form method="POST" action="{%url 'login'%}">
               {% csrf_token %}
@@ -132,6 +132,7 @@
                 <a href="{%url 'surveyapp:contact'%}">Don't have an account? </a>
             </form>
         </div>
+        
     </div>
   </body>
 </html>

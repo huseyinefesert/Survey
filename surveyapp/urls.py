@@ -9,4 +9,5 @@ urlpatterns = [
     path("adminsite/", views.adminsite, name='adminsite'),
     path("contact/", views.contact, name='contact'),
     path("about/", views.about, name='about'),
+    path("login/", views.login_function, name='login'),
 ]

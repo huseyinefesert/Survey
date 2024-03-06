@@ -2,7 +2,9 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from . import models
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
@@ -36,3 +38,25 @@ def contact(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def login_function(request):
+    if request.user.is_authenticated:
+        return redirect("surveyapp:adminsite")
+    else:
+        if request.method == "POST":
+            username = request.POST.get("username")
+            password = request.POST.get("password")
+
+            try:
+                user = User.objects.get(username=username)
+            except:
+                messages.error(request, "User Not Found....")
+                return redirect("surveyapp:login")
+
+            if user is not None:
+                login(request, user)
+                return redirect("surveyapp:adminsite")
+            else:
+                messages.error(request, "Username or Password does not match...")
+
+    return render(request, "login.html")
