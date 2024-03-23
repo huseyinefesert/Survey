@@ -10,4 +10,5 @@ urlpatterns = [
     path("contact/", views.contact, name='contact'),
     path("about/", views.about, name='about'),
     path("login/", views.login_function, name='login'),
+    path("test/", views.chart, name='test'),
 ]
