@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Feedback Charts</h1>
+
+    <h2>Politeness Chart</h2>
+    <div style="height: 500px">
+        <canvas id="politenessChart"></canvas>
+    </div>
+    
+    <h2>Cleanliness Chart</h2>
+    <div style="height: 500px">
+        <canvas id="cleanlinessChart" ></canvas>
+    </div>  
+    <h2>Food Quality Chart</h2>
+    <div style="height: 500px">
+        <canvas id="foodQualityChart" ></canvas>
+
+    <h2>Feelings Chart</h2>
+    <div style="height: 500px">
+        <canvas id="feelingsChart"></canvas>
+    </div>
+    <h2>Recommendation Chart</h2>
+    <div style="height: 500px">
+        <canvas id="recommendationChart"></canvas>
+    </div>
+    <script>
+        
+        var politenessData = {
+            
+            labels: ['Çok iyi', 'İyi', 'Orta', 'Kötü','Çok Kötü'],
+            datasets: [{
+                label: 'Görevlilerin Tutumu',
+                data: {{politeness_array}},
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 205, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 205, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        var cleanlinessData = {
+            labels: ['Çok iyi', 'İyi', 'Orta', 'Kötü','Çok Kötü'],
+            datasets: [{
+                label: 'Genel Temizlik',
+                data: {{cleanliness_array}},
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 205, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 205, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        var foodQualityData = {
+            labels: ['Çok iyi', 'İyi', 'Orta', 'Kötü','Çok Kötü'],
+            datasets: [{
+                label: 'Yemek Kalitesi',
+                data: {{food_array}},
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 205, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 205, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        var feelingsData = {
+            labels: ['Mutlu', 'Neşeli', 'Heyecanlı', 'Dinlendirici', 'Eğlenceli', 'Üzgün', 'Reaksiyon', 'Sinirlenmiş', 'Hayal Kırıklığına Uğramış',"İrite Edici"],
+            datasets: [{
+                label: 'Duygular',
+                data: {{feelings_array}},
+                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        var recommendationData = {
+            labels: ['Öneririm', 'Önermem', 'Belki'],
+            datasets: [{
+                label: 'Önerme Durumları',
+                data: {{recommend_array}},
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(255, 205, 86, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 205, 86, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        var politenessCtx = document.getElementById('politenessChart').getContext('2d');
+        var cleanlinessCtx = document.getElementById('cleanlinessChart').getContext('2d');
+        var foodQualityCtx = document.getElementById('foodQualityChart').getContext('2d');
+        var feelingsCtx = document.getElementById('feelingsChart').getContext('2d');
+        var recommendationCtx = document.getElementById('recommendationChart').getContext('2d');
+
+        new Chart(politenessCtx, {
+            type: 'pie',
+            data: politenessData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+                
+            }
+        });
+
+        new Chart(cleanlinessCtx, {
+            type: 'pie',
+            data: cleanlinessData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        new Chart(foodQualityCtx, {
+            type: 'pie',
+            data: foodQualityData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        new Chart(feelingsCtx, {
+            type: 'bar',
+            data: feelingsData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        new Chart(recommendationCtx, {
+            type: 'pie',
+            data: recommendationData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+    <div class="container" style="width: 50%;">
+        {%for survey in text%}
+            <div class="card">
+                <div class="card-header" style="background-color: cornflowerblue;">
+                   <h4> {{survey.name}}</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        {{survey.text}}
+                    </p>
+                </div>
+                
+            </div>
+        {%endfor%}
+
+    </div>
+</body>
+</html>

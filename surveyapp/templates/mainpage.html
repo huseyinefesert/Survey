@@ -118,37 +118,42 @@
   		.rate > label:hover ~ input:checked ~ label {
     		color: #c59b08;
   		}
-		  .rating { /*En üstteki yıldız-ters yönlü*/
-			width = 10px;
-			height = 10px;
-			flex-direction: row-reverse;
-			justify-content: center;
-			}
-			.rating > input{
-			 display:none;
-			}
-			.rating > label {
-			position: relative;
-			
-			font-size: 5vw;
-			color: #FFD700;
+		  .star-rating {
+			display: flex;
+			justify-content: flex-end;
+			direction: rtl;
+		  }
+		  
+		  .star-rating .star {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
 			cursor: pointer;
-			}
-			.rating > label::before{
-			content: "\2605";
+			background-color: #ccc;
+			-webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+			clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+		  }
+		  
+		  .star-rating input[type="radio"]:checked ~ label,
+		  .star-rating label:hover,
+		  .star-rating label:hover ~ label {
+			background-color: #ffc107;
+		  }
+		  
+		  .star-rating input[type="radio"] {
 			position: absolute;
 			opacity: 0;
-			}
-			.rating > label:hover:before,
-			.rating > label:hover ~ label:before {
-			opacity: 1 !important;
-			}
-			.rating > input:checked ~ label:before{
-			opacity:1;
-			}
-			.rating:hover > input:checked ~ label:before{
-			opacity: 0.4;
-			 }
+			width: 0;
+			height: 0;
+		  }
+		  
+		  .star-rating label {
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+			position: relative;
+			direction: ltr;
+		  }
 
 	</style>
 </head>
@@ -170,13 +175,7 @@
 			<input type="text" id="name"name="name"
 				placeholder="Enter your name" />
 		</div>
-		<div class="rating">
-			<input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
-			<input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
-			<input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
-			<input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
-			<input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
-		  </div>
+		
 
 		<div class="form-control">
 			<label for="email" id="label-email">
@@ -203,54 +202,54 @@
 			<label for="cleanliness" id="label-cleanliness">
 				Cleanliness
 			</label>
-			<div class="rate">
-				<input type="radio" id="star5Clean" name="rateClean" value="5" />
-      			<label for="star5Clean" title="5 Stars">5 stars</label>
-      			<input type="radio" id="star4Clean" name="rateClean" value="4" />
-      			<label for="star4Clean" title="4 Stars">4 stars</label>
-      			<input type="radio" id="star3Clean" name="rateClean" value="3" />
-      			<label for="star3Clean" title="3 Stars">3 stars</label>
-      			<input type="radio" id="star2Clean" name="rateClean" value="2" />
-      			<label for="star2Clean" title="2 Stars">2 stars</label>
-      			<input type="radio" id="star1Clean" name="rateClean" value="1" />
-      			<label for="star1Clean" title="1 Star">1 star</label>
-			</div>
+			<div class="star-rating">
+				<input class="star" id="star-5" type="radio" name="rateClean" value="5"/>
+				<label class="star" for="star-5"></label>
+				<input class="star" id="star-4" type="radio" name="rateClean" value="4"/>
+				<label class="star" for="star-4"></label>
+				<input class="star" id="star-3" type="radio" name="rateClean" value="3"/>
+				<label class="star" for="star-3"></label>
+				<input class="star" id="star-2" type="radio" name="rateClean" value="2"/>
+				<label class="star" for="star-2"></label>
+				<input class="star" id="star-1" type="radio" name="rateClean" value="1"/>
+				<label class="star" for="star-1"></label>
+			  </div>
 		</div>
 		<br><br><br>	
 		<div class="form-control">
 			<label for="politeness" id="labe-politeness">
 				Politeness of The Staff
 			</label>
-			<div class="rate">
-				<input type="radio" id="star5Polite" name="ratePolite" value="5" />
-      			<label for="star5Polite" title="5 Stars">5 stars</label>
-      			<input type="radio" id="star4Polite" name="ratePolite" value="4" />
-      			<label for="star4Polite" title="4 Stars">4 stars</label>
-      			<input type="radio" id="star3Polite" name="ratePolite" value="3" />
-      			<label for="star3Polite" title="3 Stars">3 stars</label>
-      			<input type="radio" id="star2Polite" name="ratePolite" value="2" />
-      			<label for="star2Polite" title="2 Stars">2 stars</label>
-      			<input type="radio" id="star1Polite" name="ratePolite" value="1" />
-      			<label for="star1Polite" title="1 Star">1 star</label>
-			</div>
+			<div class="star-rating">
+				<input class="star" id="star-56" type="radio" name="ratePolite" value="5"/>
+				<label class="star" for="star-56"></label>
+				<input class="star" id="star-46" type="radio" name="ratePolite" value="4"/>
+				<label class="star" for="star-46"></label>
+				<input class="star" id="star-36" type="radio" name="ratePolite" value="3"/>
+				<label class="star" for="star-36"></label>
+				<input class="star" id="star-26" type="radio" name="ratePolite" value="2"/>
+				<label class="star" for="star-26"></label>
+				<input class="star" id="star-16" type="radio" name="ratePolite" value="1"/>
+				<label class="star" for="star-16"></label>
+			  </div>
 		</div>
 		<br><br><br>
 		<div class="form-control">
 			<label for="food" id="label-food">
 				Food Quality
 			</label>
-			<div class="rate">
-				<input type="radio" id="star5Food" name="rateFood" value="5" />
-      			<label for="star5Food" title="5 Stars">5 stars</label>
-      			<input type="radio" id="star4Food" name="rateFood" value="4" />
-      			<label for="star4Food" title="4 Stars">4 stars</label>
-      			<input type="radio" id="star3Food" name="rateFood" value="3" />
-      			<label for="star3Food" title="3 Stars">3 stars</label>
-      			<input type="radio" id="star2Food" name="rateFood" value="2" />
-      			<label for="star2Food" title="2 Stars">2 stars</label>
-      			<input type="radio" id="star1Food" name="rateFood" value="1" />
-      			<label for="star1Food" title="1 Star">1 star</label>
-			</div>
+			<div class="star-rating">
+				<input class="star" id="star-57" type="radio" name="rateFood" value="5"/>
+				<label class="star" for="star-57"></label>
+				<input class="star" id="star-47" type="radio" name="rateFood" value="4"/>
+				<label class="star" for="star-47"></label>
+				<input class="star" id="star-37" type="radio" name="rateFood" value="3"/>
+				<label class="star" for="star-37"></label>
+				<input class="star" id="star-27" type="radio" name="rateFood" value="2"/>
+				<label class="star" for="star-27"></label>
+				<input class="star" id="star-17" type="radio" name="rateFood" value="1"/>
+				<label class="star" for="star-17"></label>
+			  </div>
 		</div>
 		<br><br><br>
 		<div class="form-control">
@@ -281,43 +280,43 @@
 			</label>
 			<!-- Input Type Checkbox -->
 			<label for="inp-1">
-				<input type="checkbox" value="Happy" name="inp">Happy
+				<input type="checkbox" value="0" name="inp">Happy
 				</input>
 			</label>
 			<label for="inp-2">
-				<input type="checkbox" value="Joyful" name="inp">Joyful
+				<input type="checkbox" value="1" name="inp">Joyful
 				</input>
 			</label>
 			<label for="inp-3">
-				<input type="checkbox" value = "Excited" name="inp">Excited
+				<input type="checkbox" value = "2" name="inp">Excited
 				</input>
 			</label>
 			<label for="inp-4">
-				<input type="checkbox" value = "Relaxed" name="inp">Relaxed 
+				<input type="checkbox" value = "3" name="inp">Relaxed 
 				</input>
 			</label>
 			<label for="inp-5">
-				<input type="checkbox" value = "Amused" name="inp">Amused
+				<input type="checkbox" value = "4" name="inp">Amused
 				</input>
 			</label>
 			<label for="inp-6">
-				<input type="checkbox" value = "Sadness" name="inp">Sadness
+				<input type="checkbox" value = "5" name="inp">Sadness
 				</input>
 			</label>
 			<label for="inp-7">
-				<input type="checkbox" value = "React" name="inp">React
+				<input type="checkbox" value = "6" name="inp">React
 				</input>
 			</label>
 			<label for="inp-8">
-				<input type="checkbox" value = "Frustration" name="inp">Frustration
+				<input type="checkbox" value = "7" name="inp">Frustration
 				</input>
 			</label>
 			<label for="inp-9">
-				<input type="checkbox" value = "Disappointment" name="inp">Disappointment
+				<input type="checkbox" value = "8" name="inp">Disappointment
 				</input>
 			</label>
 			<label for="inp-10">
-				<input type="checkbox" value = "Irritation" name="inp">Irritation
+				<input type="checkbox" value = "9" name="inp">Irritation
 				</input>
 			</label>
 		</div>

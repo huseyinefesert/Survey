@@ -5,26 +5,49 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
-from fusioncharts import FusionCharts
 
-""" def chart(request):
-    dataSource = {}
-    dataSource['chart'] = {
-        "caption": "Monthly revenue for last year",
-            "subCaption": "Harry's SuperMart",
-            "xAxisName": "Month",
-            "yAxisName": "Revenues (In USD)",
-            "numberPrefix": "$",
-            "theme": "zune"
-        }
-    dataSource['data'] = []
-    for key in models.Survey.objects.all():
-      data = {}
-      data['label'] = key.cleanliness
-      data['value'] = key.politeness
-      dataSource['data'].append(data)
-    column2D = FusionCharts("column2D", "ex1" , "600", "350", "chart-1", "json", dataSource)
-    return render(request, 'test.html', {'output': column2D.render()}) """
+def chart(request):
+    politeness5 = models.Survey.objects.all().filter(politeness = 5).count()
+    politeness4 = models.Survey.objects.all().filter(politeness = 4).count()
+    politeness3 = models.Survey.objects.all().filter(politeness = 3).count()
+    politeness2 = models.Survey.objects.all().filter(politeness = 2).count()
+    politeness1 = models.Survey.objects.all().filter(politeness = 1).count()
+
+    cleanliness5 = models.Survey.objects.all().filter(cleanliness = 5).count()
+    cleanliness4 = models.Survey.objects.all().filter(cleanliness = 4).count()
+    cleanliness3 = models.Survey.objects.all().filter(cleanliness = 3).count()
+    cleanliness2 = models.Survey.objects.all().filter(cleanliness = 2).count()
+    cleanliness1 = models.Survey.objects.all().filter(cleanliness = 1).count()
+
+    food5 = models.Survey.objects.all().filter(food = 5).count()
+    food4 = models.Survey.objects.all().filter(food = 4).count()
+    food3 = models.Survey.objects.all().filter(food = 3).count()
+    food2 = models.Survey.objects.all().filter(food = 2).count()
+    food1 = models.Survey.objects.all().filter(food = 1).count()
+
+    happy = models.Survey.objects.all().filter(feelings = 0).count()
+    happy2 = models.Survey.objects.all().filter(feelings = 1).count()
+    happy3 = models.Survey.objects.all().filter(feelings = 2).count()
+    happy4 = models.Survey.objects.all().filter(feelings = 3).count()
+    happy5 = models.Survey.objects.all().filter(feelings = 4).count()
+    happy6 = models.Survey.objects.all().filter(feelings = 5).count()
+    happy7 = models.Survey.objects.all().filter(feelings = 6).count()
+    happy8 = models.Survey.objects.all().filter(feelings = 7).count()
+    happy9 = models.Survey.objects.all().filter(feelings = 8).count()
+    happy0 = models.Survey.objects.all().filter(feelings = 9).count()
+    recommend1 = models.Survey.objects.all().filter(recommend = 1).count()
+    recommend0 = models.Survey.objects.all().filter(recommend = 0).count()
+    #recommend_1 = models.Survey.objects.all().filter(recommend = -1).count()
+
+    text = models.Survey.objects.all()
+    politeness_array = [politeness5, politeness4, politeness3, politeness2, politeness1]
+    cleanliness_array = [cleanliness5, cleanliness4, cleanliness3, cleanliness2, cleanliness1]
+    food_array = [food5, food4, food3, food2, food1]
+    feelings_array = [happy, happy2, happy3, happy4, happy5, happy6, happy7, happy8, happy9, happy0]
+    recommend_array = [recommend1, recommend0 ]
+
+    
+    return render(request, 'test.html', {'politeness_array': politeness_array,"cleanliness_array":cleanliness_array,"food_array":food_array,"feelings_array":feelings_array,"recommend_array":recommend_array,"text":text})
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
@@ -81,3 +104,4 @@ def login_function(request):
                 messages.error(request, "Username or Password does not match...")
 
     return render(request, "login.html")
+
