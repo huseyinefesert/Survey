@@ -154,25 +154,23 @@
 			position: relative;
 			direction: ltr;
 		  }
-
 	</style>
 </head>
 
 <body>
-	<h1>Survey Form</h1>
+	<h1>Survey Form for A</h1>
 
 	<!-- Create Form -->
 	<form id="form"method="post">
 		{% csrf_token %}
 		<!-- Details -->
-		
 		<div class="form-control">
 			<label for="name" id="label-name">
 				Name
 			</label>
 
 			<!-- Input Type Text -->
-			<input type="text" id="name"name="name"
+			<input type="text" id="name" name="name"
 				placeholder="Enter your name" />
 		</div>
 		

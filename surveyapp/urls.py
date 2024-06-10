@@ -6,9 +6,8 @@ urlpatterns = [
     #path("home", views.home, name='home'),
     path("survey", views.checkboxes, name='home'),
     path("thanks", views.thanks, name='thanks'),
-    path("adminsite/", views.adminsite, name='adminsite'),
     path("contact/", views.contact, name='contact'),
     path("about/", views.about, name='about'),
     path("login/", views.login_function, name='login'),
-    path("test/", views.chart, name='test'),
+    path("admin_main/", views.chart, name='admin_main'),
 ]
