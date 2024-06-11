@@ -5,7 +5,7 @@
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta charset="UTF-8">
-	<title>{% translate "A Noktası Anketi" %}</title>
+	<title>{% translate "B Noktası Anketi" %}</title>
 	<style>
 		/* Styling the Body element 
 		i.e. Color, Font, Alignment */
@@ -23,7 +23,7 @@
 			font-weight: bold;
 		}
 		body {
-			background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/09/istanbul-sunset-top-view-building-4k_1538065702.jpg.webp");
+			background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/09/istanbul-turkey-sea-buildings-4k_1538067180.jpg.webp");
 			font-family: Verdana;
 			text-align: center;
 		}
@@ -245,7 +245,7 @@
 </script>
 
 <body>
-	<h1>{% translate "Survey Form for A"%}</h1>
+	<h1>{% translate "Survey Form for B"%}</h1>
 	
 	<div class="language-selector">
 		<a class="dropdown-toggle">{% translate "Choose a language" %}</a>
@@ -256,7 +256,7 @@
 	
 			{% for language in languages %}
 				<li>
-					<a href="/{{ language.code }}/survey_A">
+					<a href="/{{ language.code }}/survey_B">
                         {{ language.name_local }}
                     </a>
 				</li>
@@ -337,19 +337,19 @@
 		</div>
 		<br><br><br>
 		<div class="form-control">
-			<label for="food" id="label-food">
-				{% translate "Food Quality" %}
+			<label for="vent" id="label-vent">
+				{% translate "Ventilation Quality" %}
 			</label>
 			<div class="star-rating">
-				<input class="star" id="star-57" type="radio" name="rateFood" value="5"/>
+				<input class="star" id="star-57" type="radio" name="rateVent" value="5"/>
 				<label class="star" for="star-57"></label>
-				<input class="star" id="star-47" type="radio" name="rateFood" value="4"/>
+				<input class="star" id="star-47" type="radio" name="rateVent" value="4"/>
 				<label class="star" for="star-47"></label>
-				<input class="star" id="star-37" type="radio" name="rateFood" value="3"/>
+				<input class="star" id="star-37" type="radio" name="rateVent" value="3"/>
 				<label class="star" for="star-37"></label>
-				<input class="star" id="star-27" type="radio" name="rateFood" value="2"/>
+				<input class="star" id="star-27" type="radio" name="rateVent" value="2"/>
 				<label class="star" for="star-27"></label>
-				<input class="star" id="star-17" type="radio" name="rateFood" value="1"/>
+				<input class="star" id="star-17" type="radio" name="rateVent" value="1"/>
 				<label class="star" for="star-17"></label>
 			  </div>
 		</div>
@@ -378,7 +378,7 @@
 
 		<div class="form-control">
 			<label>{% translate "How did you feel during your trip?" %}
-				<small>({% translate "Select all that apply"%})</small>
+				<small>(Check all that apply)</small>
 			</label>
 			<!-- Input Type Checkbox -->
 			<label for="inp-1">
@@ -406,11 +406,11 @@
 				</input>
 			</label>
 			<label for="inp-7">
-				<input type="checkbox" value = "6" name="inp">{% translate "React"%}
+				<input type="checkbox" value = "6" name="inp">{% translate "Bored"%}
 				</input>
 			</label>
 			<label for="inp-8">
-				<input type="checkbox" value = "7" name="inp">{% translate "Frustration"%}
+				<input type="checkbox" value = "7" name="inp">{% translate "Curious"%}
 				</input>
 			</label>
 			<label for="inp-9">
@@ -418,7 +418,7 @@
 				</input>
 			</label>
 			<label for="inp-10">
-				<input type="checkbox" value = "9" name="inp">{% translate "Irritation"%}
+				<input type="checkbox" value = "9" name="inp">{% translate "Nervous"%}
 				</input>
 			</label>
 		</div>
@@ -429,7 +429,7 @@
             </label>
 
             <!-- multi-line text input control -->
-            <textarea name="comment" id="comment" placeholder="{% translate "Enter your comment here" %}" cols="20" rows="5"></textarea>
+            <textarea name="comment" id="comment" placeholder="Enter your comment here" cols="20" rows="5"></textarea>
         </div>
 
 		<!-- Multi-line Text Input Control -->

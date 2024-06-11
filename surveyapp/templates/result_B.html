@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>YZ Tavsiyesi</title>
+    <style>
+        .user_infos{
+            text-align: right;
+            margin-top: 15px;
+            margin-right: 25px;
+            padding: 25px;
+        }
+        .header {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold; 
+        }
+        .textcontainer{
+            width: 50%; 
+            text-align: left;
+            margin: auto;
+            margin-top: 25px;
+            padding: auto;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">B Noktasının Anketleri Sonucunda Yapay Zekanın Tavsiyesi</h1>
+    <div class="user_infos">
+        <text>{{user.username}}</text>
+        <text>,</text>
+        <text>{{user.email}}</text>
+        <p></p>
+        <form method="post" action="{% url 'logout' %}?next=/login">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-outline-danger" >Çıkış Yap</button>
+        </form>
+        <p></p>
+        <button id="prompt_again" class="btn btn-outline-primary">Tekrar Tavsiye Oluştur</button>
+        <p></p>
+        <button id="go_back" class="btn btn-outline-success">Anket Sonuçlarına Geri Dön</button>
+    </div>
+    <div class="textcontainer">{{ advice | safe }}</div>
+</body>
+    <script>
+        var promptAgainButton = document.getElementById("prompt_again");
+        var goBackButton = document.getElementById("go_back");
+
+        promptAgainButton.addEventListener("click", function() {
+            promptAgainButton.textContent = "Bekleyiniz";
+            setTimeout(function() {
+                window.location.href = "{% url 'surveyapp:result_B' %}";
+            }, 2000);
+        });
+
+        goBackButton.addEventListener("click", function() {
+            window.location.href = "{% url 'surveyapp:admin_main2' %}";
+        });
+    </script>
+</html>

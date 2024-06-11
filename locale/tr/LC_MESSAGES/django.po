@@ -1,0 +1,211 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-11 18:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\survey\settings.py:142
+msgid "English"
+msgstr "İngilizce"
+
+#: .\survey\settings.py:143
+msgid "Turkish"
+msgstr "Türkçe"
+
+#: .\survey\settings.py:144
+msgid "German"
+msgstr "Almanca"
+
+#: .\survey\settings.py:145
+msgid "Russian"
+msgstr "Rusça"
+
+#: .\surveyapp\templates\mainpage.html:8
+msgid "A Noktası Anketi"
+msgstr "A Noktası Anketi"
+
+#: .\surveyapp\templates\mainpage.html:248
+msgid "Survey Form for A"
+msgstr "A Noktası için Anket"
+
+#: .\surveyapp\templates\mainpage.html:251
+#: .\surveyapp\templates\mainpage2.html:251
+msgid "Choose a language"
+msgstr "Bir dil seçin"
+
+#: .\surveyapp\templates\mainpage.html:275
+#: .\surveyapp\templates\mainpage2.html:275
+msgid "Name"
+msgstr "İsim"
+
+#: .\surveyapp\templates\mainpage.html:285
+#: .\surveyapp\templates\mainpage2.html:285
+msgid "Email"
+msgstr "E-posta"
+
+#: .\surveyapp\templates\mainpage.html:294
+#: .\surveyapp\templates\mainpage2.html:294
+msgid "Phone Number"
+msgstr "Telefon Numarası"
+
+#: .\surveyapp\templates\mainpage.html:301
+#: .\surveyapp\templates\mainpage2.html:301
+msgid "From 1 to 5 stars"
+msgstr "1'den 5 yıldıza kadar"
+
+#: .\surveyapp\templates\mainpage.html:305
+#: .\surveyapp\templates\mainpage2.html:305
+msgid "Sanitation"
+msgstr "Temizlik"
+
+#: .\surveyapp\templates\mainpage.html:323
+#: .\surveyapp\templates\mainpage2.html:323
+msgid "Politeness of The Staff"
+msgstr "Personelin Kibarlığı"
+
+#: .\surveyapp\templates\mainpage.html:341
+msgid "Food Quality"
+msgstr "Yiyecek Kalitesi"
+
+#: .\surveyapp\templates\mainpage.html:359
+#: .\surveyapp\templates\mainpage2.html:359
+msgid "Would you recommend us to others?"
+msgstr "Bizi başkalarına tavsiye eder misiniz?"
+
+#: .\surveyapp\templates\mainpage.html:364
+#: .\surveyapp\templates\mainpage2.html:364
+msgid "Yes"
+msgstr "Evet"
+
+#: .\surveyapp\templates\mainpage.html:369
+#: .\surveyapp\templates\mainpage2.html:369
+msgid "No"
+msgstr "Hayır"
+
+#: .\surveyapp\templates\mainpage.html:374
+#: .\surveyapp\templates\mainpage2.html:374
+msgid "Maybe"
+msgstr "Belki"
+
+#: .\surveyapp\templates\mainpage.html:380
+#: .\surveyapp\templates\mainpage2.html:380
+msgid "How did you feel during your trip?"
+msgstr "Seyahatiniz sırasında nasıl hissettiniz?"
+
+#: .\surveyapp\templates\mainpage.html:381
+msgid "Select all that apply"
+msgstr "Uygun olan tüm seçenekleri seçin"
+
+#: .\surveyapp\templates\mainpage.html:385
+#: .\surveyapp\templates\mainpage2.html:385
+msgid "Happy"
+msgstr "Mutlu"
+
+#: .\surveyapp\templates\mainpage.html:389
+#: .\surveyapp\templates\mainpage2.html:389
+msgid "Joyful"
+msgstr "Neşeli"
+
+#: .\surveyapp\templates\mainpage.html:393
+#: .\surveyapp\templates\mainpage2.html:393
+msgid "Excited"
+msgstr "Heyecanlı"
+
+#: .\surveyapp\templates\mainpage.html:397
+#: .\surveyapp\templates\mainpage2.html:397
+msgid "Relaxed"
+msgstr "Rahatlamış"
+
+#: .\surveyapp\templates\mainpage.html:401
+#: .\surveyapp\templates\mainpage2.html:401
+msgid "Amused"
+msgstr "Eğlenmiş"
+
+#: .\surveyapp\templates\mainpage.html:405
+#: .\surveyapp\templates\mainpage2.html:405
+msgid "Sadness"
+msgstr "Üzüntü"
+
+#: .\surveyapp\templates\mainpage.html:409
+msgid "React"
+msgstr "Tepki"
+
+#: .\surveyapp\templates\mainpage.html:413
+msgid "Frustration"
+msgstr "Hayal Kırıklığı"
+
+#: .\surveyapp\templates\mainpage.html:417
+#: .\surveyapp\templates\mainpage2.html:417
+msgid "Disappointment"
+msgstr "Hayal Kırıklığı"
+
+#: .\surveyapp\templates\mainpage.html:421
+msgid "Irritation"
+msgstr "Rahatsızlık"
+
+#: .\surveyapp\templates\mainpage.html:428
+#: .\surveyapp\templates\mainpage2.html:428
+msgid "Any comments or suggestions"
+msgstr "Herhangi bir yorum veya öneri"
+
+#: .\surveyapp\templates\mainpage.html:432
+msgid "Enter your comment here"
+msgstr "Yorumunuzu buraya girin"
+
+#: .\surveyapp\templates\mainpage.html:437
+#: .\surveyapp\templates\mainpage2.html:437
+msgid "Submit"
+msgstr "Gönder"
+
+#: .\surveyapp\templates\mainpage2.html:8
+msgid "B Noktası Anketi"
+msgstr "B Noktası Anketi"
+
+#: .\surveyapp\templates\mainpage2.html:248
+#, fuzzy
+#| msgid "Survey Form for A"
+msgid "Survey Form for B"
+msgstr "A Noktası için Anket"
+
+#: .\surveyapp\templates\mainpage2.html:341
+msgid "Ventilation Quality"
+msgstr "Havalandırma Kalitesi"
+
+#: .\surveyapp\templates\mainpage2.html:409
+msgid "Bored"
+msgstr "Sıkılmış"
+
+#: .\surveyapp\templates\mainpage2.html:413
+msgid "Curious"
+msgstr "Meraklı"
+
+#: .\surveyapp\templates\mainpage2.html:421
+msgid "Nervous"
+msgstr "Gergin"
+
+#: .\surveyapp\templates\thanks.html:7
+#, fuzzy
+#| msgid "Thank You!"
+msgid "Thank You"
+msgstr "Teşekkürler!"
+
+#: .\surveyapp\templates\thanks.html:47
+msgid "Thank You!"
+msgstr "Teşekkürler!"
+
+#: .\surveyapp\templates\thanks.html:48
+msgid ""
+"We appreciate you taking the time to complete our survey. Your feedback is "
+"valuable to us and will help us improve our services."
+msgstr ""
+"Anketimizi tamamladığınız için zaman ayırdığınız için teşekkür ederiz. Geri "
+"bildiriminiz bizim için değerlidir ve hizmetlerimizi geliştirmemize yardımcı "
+"olacaktır."

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -83,7 +84,7 @@ DATABASES = {
     },
     'second_db':{
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3.second_db',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -110,7 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
@@ -133,3 +133,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = ""
 LOGIN_REDIRECT_URL = "/adminsite/"
+
+from django.utils.translation import gettext_lazy as _
+
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = (
+    ('en', _('English')),
+    ('tr', _('Turkish')),
+    ('de', _('German')),
+    ('ru', _('Russian')),
+)
+
+LOCALE_PATHS = (
+    BASE_DIR / 'locale/',
+)

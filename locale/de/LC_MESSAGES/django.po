@@ -1,0 +1,209 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-11 18:52+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\survey\settings.py:142
+msgid "English"
+msgstr "Englisch"
+
+#: .\survey\settings.py:143
+msgid "Turkish"
+msgstr "Türkisch"
+
+#: .\survey\settings.py:144
+msgid "German"
+msgstr "Deutsch"
+
+#: .\survey\settings.py:145
+msgid "Russian"
+msgstr "Russisch"
+
+#: .\surveyapp\templates\mainpage.html:8
+msgid "A Noktası Anketi"
+msgstr "Umfrage für A-Punkt"
+
+#: .\surveyapp\templates\mainpage.html:248
+msgid "Survey Form for A"
+msgstr "Umfrageformular für A"
+
+#: .\surveyapp\templates\mainpage.html:251
+#: .\surveyapp\templates\mainpage2.html:251
+msgid "Choose a language"
+msgstr "Wähle eine Sprache"
+
+#: .\surveyapp\templates\mainpage.html:275
+#: .\surveyapp\templates\mainpage2.html:275
+msgid "Name"
+msgstr "Name"
+
+#: .\surveyapp\templates\mainpage.html:285
+#: .\surveyapp\templates\mainpage2.html:285
+msgid "Email"
+msgstr "E-Mail"
+
+#: .\surveyapp\templates\mainpage.html:294
+#: .\surveyapp\templates\mainpage2.html:294
+msgid "Phone Number"
+msgstr "Telefonnummer"
+
+#: .\surveyapp\templates\mainpage.html:301
+#: .\surveyapp\templates\mainpage2.html:301
+msgid "From 1 to 5 stars"
+msgstr "Von 1 bis 5 Sterne"
+
+#: .\surveyapp\templates\mainpage.html:305
+#: .\surveyapp\templates\mainpage2.html:305
+msgid "Sanitation"
+msgstr "Hygiene"
+
+#: .\surveyapp\templates\mainpage.html:323
+#: .\surveyapp\templates\mainpage2.html:323
+msgid "Politeness of The Staff"
+msgstr "Höflichkeit des Personals"
+
+#: .\surveyapp\templates\mainpage.html:341
+msgid "Food Quality"
+msgstr "Lebensmittelqualität"
+
+#: .\surveyapp\templates\mainpage.html:359
+#: .\surveyapp\templates\mainpage2.html:359
+msgid "Would you recommend us to others?"
+msgstr "Würden Sie uns anderen empfehlen?"
+
+#: .\surveyapp\templates\mainpage.html:364
+#: .\surveyapp\templates\mainpage2.html:364
+msgid "Yes"
+msgstr "Ja"
+
+#: .\surveyapp\templates\mainpage.html:369
+#: .\surveyapp\templates\mainpage2.html:369
+msgid "No"
+msgstr "Nein"
+
+#: .\surveyapp\templates\mainpage.html:374
+#: .\surveyapp\templates\mainpage2.html:374
+msgid "Maybe"
+msgstr "Vielleicht"
+
+#: .\surveyapp\templates\mainpage.html:380
+#: .\surveyapp\templates\mainpage2.html:380
+msgid "How did you feel during your trip?"
+msgstr "Wie haben Sie sich während Ihrer Reise gefühlt?"
+
+#: .\surveyapp\templates\mainpage.html:381
+msgid "Select all that apply"
+msgstr "Alle zutreffenden Optionen auswählen"
+
+#: .\surveyapp\templates\mainpage.html:385
+#: .\surveyapp\templates\mainpage2.html:385
+msgid "Happy"
+msgstr "Glücklich"
+
+#: .\surveyapp\templates\mainpage.html:389
+#: .\surveyapp\templates\mainpage2.html:389
+msgid "Joyful"
+msgstr "Freudig"
+
+#: .\surveyapp\templates\mainpage.html:393
+#: .\surveyapp\templates\mainpage2.html:393
+msgid "Excited"
+msgstr "Aufgeregt"
+
+#: .\surveyapp\templates\mainpage.html:397
+#: .\surveyapp\templates\mainpage2.html:397
+msgid "Relaxed"
+msgstr "Entspannt"
+
+#: .\surveyapp\templates\mainpage.html:401
+#: .\surveyapp\templates\mainpage2.html:401
+msgid "Amused"
+msgstr "Amüsiert"
+
+#: .\surveyapp\templates\mainpage.html:405
+#: .\surveyapp\templates\mainpage2.html:405
+msgid "Sadness"
+msgstr "Traurigkeit"
+
+#: .\surveyapp\templates\mainpage.html:409
+msgid "React"
+msgstr "Reagieren"
+
+#: .\surveyapp\templates\mainpage.html:413
+msgid "Frustration"
+msgstr "Frustration"
+
+#: .\surveyapp\templates\mainpage.html:417
+#: .\surveyapp\templates\mainpage2.html:417
+msgid "Disappointment"
+msgstr "Enttäuschung"
+
+#: .\surveyapp\templates\mainpage.html:421
+msgid "Irritation"
+msgstr "Ärger"
+
+#: .\surveyapp\templates\mainpage.html:428
+#: .\surveyapp\templates\mainpage2.html:428
+msgid "Any comments or suggestions"
+msgstr "Irgendwelche Kommentare oder Vorschläge"
+
+#: .\surveyapp\templates\mainpage.html:432
+msgid "Enter your comment here"
+msgstr "Geben Sie hier Ihren Kommentar ein"
+
+#: .\surveyapp\templates\mainpage.html:437
+#: .\surveyapp\templates\mainpage2.html:437
+msgid "Submit"
+msgstr "Absenden"
+
+#: .\surveyapp\templates\mainpage2.html:8
+msgid "B Noktası Anketi"
+msgstr "Umfrage für Punkt B"
+
+#: .\surveyapp\templates\mainpage2.html:248
+#, fuzzy
+#| msgid "Survey Form for A"
+msgid "Survey Form for B"
+msgstr "Umfrageformular für A"
+
+#: .\surveyapp\templates\mainpage2.html:341
+msgid "Ventilation Quality"
+msgstr "Belüftungsqualität"
+
+#: .\surveyapp\templates\mainpage2.html:409
+msgid "Bored"
+msgstr "Gelangweilt"
+
+#: .\surveyapp\templates\mainpage2.html:413
+msgid "Curious"
+msgstr "Neugierig"
+
+#: .\surveyapp\templates\mainpage2.html:421
+msgid "Nervous"
+msgstr "Nervös"
+
+#: .\surveyapp\templates\thanks.html:7
+msgid "Thank You"
+msgstr "Vielen Dank!"
+
+#: .\surveyapp\templates\thanks.html:47
+msgid "Thank You!"
+msgstr "Vielen Dank!"
+
+#: .\surveyapp\templates\thanks.html:48
+msgid ""
+"We appreciate you taking the time to complete our survey. Your feedback is "
+"valuable to us and will help us improve our services."
+msgstr ""
+"Wir danken Ihnen für die Zeit, die Sie sich genommen haben, um unsere "
+"Umfrage abzuschließen. Ihr Feedback ist wertvoll für uns und wird uns "
+"helfen, unsere Dienstleistungen zu verbessern."

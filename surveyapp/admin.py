@@ -4,3 +4,4 @@ from . import models
 class SurveyAdmin(admin.ModelAdmin):
     pass
 admin.site.register(models.Survey,SurveyAdmin)
+admin.site.register(models.Survey_B,SurveyAdmin)

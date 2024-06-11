@@ -5,7 +5,7 @@
     <title>Anket Sonuçları</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
         .chart-container {
             display: flex;
@@ -55,23 +55,24 @@
 </head>
 <body>
     <div class="user_infos">
-        <h1 class="header">A Noktası için Geri Dönütler</h1>
+        <h1 class="header">B Noktası için Geri Dönütler</h1>
         <text>{{user.username}}</text>
         <text>,</text>
         <text>{{user.email}}</text>
         <p></p>
         <form method="post" action="{% url 'logout' %}?next=/login">
             {% csrf_token %}
-            <button type="submit" class="btn btn-outline-danger" >Çıkış Yap</button>
+            <button type="submit" class="btn btn-outline-danger" >Logout</button>
         <p></p>
         <select id="locationSelect" class="btn btn-outline-primary">
-            <option value="{% url 'surveyapp:admin_main' %}" selected class="btn btn-light">A Noktası</option>
-            <option value="{% url 'surveyapp:admin_main2' %}" class="btn btn-light">B Noktası</option>
+            <option value="{% url 'surveyapp:admin_main' %}" class="btn btn-light">A Noktası</option>
+            <option value="{% url 'surveyapp:admin_main2' %}" selected class="btn btn-light">B Noktası</option>
         </select>
         <p></p>
-        <a id="get_ai_prompt" class="btn btn-outline-success" href="{% url 'surveyapp:result_A' %}">Yapay Zekadan Tavsiye Al</a>
+        <a id="get_ai_prompt" class="btn btn-outline-success">Yapay Zekadan Tavsiye Al</a>
     </form>
-    </div>
+    <div>
+
     <div class="chart-container">
         <div class="chart">
             <h2 class="subheaders">Görevlilerin Tutumu</h2>
@@ -88,9 +89,9 @@
         </div>  
         
         <div class="chart">
-            <h2 class="subheaders">Yiyeceklerin Kalitesi</h2>
+            <h2 class="subheaders">Havalandırma Kalitesi</h2>
             <div style="height: 500px">
-                <canvas id="foodQualityChart"></canvas>
+                <canvas id="ventQualityChart"></canvas>
             </div>
         </div>
         
@@ -106,7 +107,6 @@
         <div style="height: 500px">
             <canvas id="feelingsChart"></canvas>
         </div>
-
     </div>
     <script>
         var promptAgainButton = document.getElementById("get_ai_prompt");
@@ -114,7 +114,7 @@
         promptAgainButton.addEventListener("click", function() {
             promptAgainButton.textContent = "Bekleyiniz";
             setTimeout(function() {
-                window.location.href = "{% url 'surveyapp:result_A' %}";
+                window.location.href = "{% url 'surveyapp:result_B' %}";
             }, 2000);
         });
 
@@ -170,11 +170,11 @@
             }]
         };
 
-        var foodQualityData = {
+        var ventQualityData = {
             labels: ['Çok iyi', 'İyi', 'Orta', 'Kötü','Çok Kötü'],
             datasets: [{
-                label: 'Yemek Kalitesi',
-                data: {{food_array}},
+                label: 'Havalandırma Kalitesi',
+                data: {{vent_array}},
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.6)',
                     'rgba(54, 162, 235, 0.6)',
@@ -194,7 +194,7 @@
         };
 
         var feelingsData = {
-            labels: ['Mutlu', 'Neşeli', 'Heyecanlı', 'Rahatlamış', 'Eğlenmiş', 'Üzgün', 'Reaksiyon', 'Sinirlenmiş', 'Hayal Kırıklığı',"İrite Edici"],
+            labels: ['Mutlu', 'Neşeli', 'Heyecanlı', 'Rahatlamış', 'Eğlenmiş', 'Üzgün', 'Sıkılmış', 'Meraklı', 'Hayal Kırıklığı',"Gergin"],
             datasets: [{
                 label: 'Duygular',
                 data: {{feelings_array}},
@@ -225,7 +225,7 @@
         };
 
         var recommendationData = {
-            labels: ['Öneririm', 'Önermem', 'Belki'],
+            labels: ['Öneririm', '', 'Belki'],
             datasets: [{
                 label: 'Önerme Durumları',
                 data: {{recommend_array}},
@@ -245,7 +245,7 @@
 
         var politenessCtx = document.getElementById('politenessChart').getContext('2d');
         var cleanlinessCtx = document.getElementById('cleanlinessChart').getContext('2d');
-        var foodQualityCtx = document.getElementById('foodQualityChart').getContext('2d');
+        var ventQualityCtx = document.getElementById('ventQualityChart').getContext('2d');
         var feelingsCtx = document.getElementById('feelingsChart').getContext('2d');
         var recommendationCtx = document.getElementById('recommendationChart').getContext('2d');
 
@@ -268,9 +268,9 @@
             }
         });
 
-        new Chart(foodQualityCtx, {
+        new Chart(ventQualityCtx, {
             type: 'pie',
-            data: foodQualityData,
+            data: ventQualityData,
             options: {
                 responsive: true,
                 maintainAspectRatio: false
@@ -295,7 +295,6 @@
             }
         });
     </script>
-    
     <div class="textcontainer">
         {%for survey in text%}
             <div class="card">
