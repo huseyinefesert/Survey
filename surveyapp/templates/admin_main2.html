@@ -62,7 +62,7 @@
         <p></p>
         <form method="post" action="{% url 'logout' %}?next=/login">
             {% csrf_token %}
-            <button type="submit" class="btn btn-outline-danger" >Logout</button>
+            <button type="submit" class="btn btn-outline-danger" >Çıkış Yap</button>
         <p></p>
         <select id="locationSelect" class="btn btn-outline-primary">
             <option value="{% url 'surveyapp:admin_main' %}" class="btn btn-light">A Noktası</option>

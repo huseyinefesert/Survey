@@ -140,7 +140,7 @@ msgstr "Tepki"
 
 #: .\surveyapp\templates\mainpage.html:413
 msgid "Frustration"
-msgstr "Hayal Kırıklığı"
+msgstr "Sinirli"
 
 #: .\surveyapp\templates\mainpage.html:417
 #: .\surveyapp\templates\mainpage2.html:417
