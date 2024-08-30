@@ -34,7 +34,7 @@ msgstr "A Noktası Anketi"
 
 #: .\surveyapp\templates\mainpage.html:248
 msgid "Survey Form for A"
-msgstr "A Noktası için Anket"
+msgstr "A Noktası Anketi"
 
 #: .\surveyapp\templates\mainpage.html:251
 #: .\surveyapp\templates\mainpage2.html:251
@@ -157,6 +157,7 @@ msgid "Any comments or suggestions"
 msgstr "Herhangi bir yorum veya öneri"
 
 #: .\surveyapp\templates\mainpage.html:432
+#: .\surveyapp\templates\mainpage2.html:432
 msgid "Enter your comment here"
 msgstr "Yorumunuzu buraya girin"
 
@@ -176,14 +177,9 @@ msgid "Read the KVKK Information"
 msgstr "KVKK Bilgilerini Oku"
 
 #: .\surveyapp\templates\mainpage2.html:8
-msgid "B Noktası Anketi"
+msgid "Survey Form for B"
 msgstr "B Noktası Anketi"
 
-#: .\surveyapp\templates\mainpage2.html:248
-#, fuzzy
-#| msgid "Survey Form for A"
-msgid "Survey Form for B"
-msgstr "A Noktası için Anket"
 
 #: .\surveyapp\templates\mainpage2.html:341
 msgid "Ventilation Quality"

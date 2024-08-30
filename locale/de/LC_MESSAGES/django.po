@@ -157,6 +157,7 @@ msgid "Any comments or suggestions"
 msgstr "Irgendwelche Kommentare oder Vorschläge"
 
 #: .\surveyapp\templates\mainpage.html:432
+#: .\surveyapp\templates\mainpage2.html:432
 msgid "Enter your comment here"
 msgstr "Geben Sie hier Ihren Kommentar ein"
 
@@ -166,14 +167,9 @@ msgid "Submit"
 msgstr "Absenden"
 
 #: .\surveyapp\templates\mainpage2.html:8
-msgid "B Noktası Anketi"
+msgid "Survey Form for B"
 msgstr "Umfrage für Punkt B"
 
-#: .\surveyapp\templates\mainpage2.html:248
-#, fuzzy
-#| msgid "Survey Form for A"
-msgid "Survey Form for B"
-msgstr "Umfrageformular für A"
 
 #: .\surveyapp\templates\mainpage2.html:341
 msgid "Ventilation Quality"
