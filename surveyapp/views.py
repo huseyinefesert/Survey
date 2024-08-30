@@ -15,7 +15,12 @@ import google.generativeai as genai
 genai.configure(api_key='AIzaSyDGap4WpwiUiMEIQOg6-1ilyWsXTCyduD4')
 gemini_model = genai.GenerativeModel('gemini-1.5-flash')
 
+def get_kvkk(request):
+    return render(request,"kvkk.html")
+
 def get_advice_A(request):
+    if not request.user.is_authenticated:
+        return redirect('surveyapp:login')
 
     response = generate_advice("A")
 
@@ -29,6 +34,8 @@ def get_advice_A(request):
     return render(request, "result_A.html", {"advice": response})
 
 def get_advice_B(request):
+    if not request.user.is_authenticated:
+        return redirect('surveyapp:login')
 
     response = generate_advice("B")
 

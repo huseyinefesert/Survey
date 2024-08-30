@@ -199,6 +199,107 @@ msgstr "Vielen Dank!"
 msgid "Thank You!"
 msgstr "Vielen Dank!"
 
+#: .\surveyapp\templates\mainpage.html
+#: .\surveyapp\templates\mainpage2.html
+msgid "I consent to the processing of my personal data within the scope of the Tourist Satisfaction Monitoring System and to the deletion of this data after the competition ends."
+msgstr "Ich stimme der Verarbeitung meiner personenbezogenen Daten im Rahmen des Touristenzufriedenheitsüberwachungssystems zu und der Löschung dieser Daten nach Ende des Wettbewerbs."
+
+#: .\surveyapp\templates\mainpage.html
+#: .\surveyapp\templates\mainpage2.html
+msgid "Read the KVKK Information"
+msgstr "KVKK-Informationen lesen"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Turist Memnuniyet İzleme Sistemi KVKK Aydınlatma ve Açık Rıza Metni"
+msgstr "Touristen-Zufriedenheitsüberwachungssystem KVKK Informations- und Einwilligungserklärung"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Aydınlatma Metni"
+msgstr "Informationsblatt"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Değerli Katılımcı"
+msgstr "Wertgeschätzter Teilnehmer"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Turist Memnuniyet İzleme Sistemi kapsamında kişisel verilerinizin korunmasına büyük önem veriyoruz. Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca, kişisel verilerinizin işlenme süreçleri hakkında sizi bilgilendirmek amacıyla hazırlanmıştır."
+msgstr "Im Rahmen des Touristen-Zufriedenheitsüberwachungssystems legen wir großen Wert auf den Schutz Ihrer personenbezogenen Daten. Dieses Dokument wurde erstellt, um Sie gemäß dem Gesetz Nr. 6698 über den Schutz personenbezogener Daten (KVKK) über die Verarbeitung Ihrer personenbezogenen Daten zu informieren."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Toplanan Kişisel Veriler:"
+msgstr "Gesammelte personenbezogene Daten:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Bu proje kapsamında, adınız, soyadınız, e-posta adresiniz ve telefon numaranız gibi kişisel verileriniz toplanmaktadır. E-posta adresiniz ve telefon numaranız, sisteme `example@gmail.com` ve `+90 555 555 55 55` şeklinde kaydedilecektir."
+msgstr "Im Rahmen dieses Projekts werden personenbezogene Daten wie Ihr Name, Nachname, Ihre E-Mail-Adresse und Telefonnummer gesammelt. Ihre E-Mail-Adresse und Telefonnummer werden im System als `example@gmail.com` und `+90 555 555 55 55` gespeichert."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Verilerin İşlenme Amacı:"
+msgstr "Zweck der Datenverarbeitung:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Toplanan kişisel verileriniz, projemizin geliştirilmesi ve yarışma süreçlerinin yönetilmesi amacıyla işlenecektir. Verileriniz, yalnızca bu amaçlar doğrultusunda kullanılacak olup, üçüncü şahıslarla paylaşılmayacaktır."
+msgstr "Die gesammelten personenbezogenen Daten werden zur Weiterentwicklung unseres Projekts und zur Verwaltung der Wettbewerbsprozesse verarbeitet. Ihre Daten werden ausschließlich für diese Zwecke verwendet und nicht an Dritte weitergegeben."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Verilerin Saklanma Süresi:"
+msgstr "Aufbewahrungsdauer der Daten:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Kişisel verileriniz, yarışmanın sona erdiği tarihten itibaren 7 gün içinde kalıcı olarak silinecektir."
+msgstr "Ihre personenbezogenen Daten werden innerhalb von 7 Tagen nach dem Ende des Wettbewerbs dauerhaft gelöscht."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Veri Güvenliği:"
+msgstr "Datensicherheit:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Verilerinizin güvenliğini sağlamak için gerekli teknik ve idari önlemler alınmaktadır. Veriler, yetkisiz erişime karşı korunmaktadır."
+msgstr "Es werden alle erforderlichen technischen und administrativen Maßnahmen getroffen, um die Sicherheit Ihrer Daten zu gewährleisten. Die Daten sind gegen unbefugten Zugriff geschützt."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Katılımcı Hakları:"
+msgstr "Rechte der Teilnehmer:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "KVKK kapsamında, kişisel verileriniz üzerinde aşağıdaki haklara sahipsiniz:"
+msgstr "Im Rahmen des KVKK haben Sie folgende Rechte an Ihren personenbezogenen Daten:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Kişisel verilerinizin işlenip işlenmediğini öğrenme,"
+msgstr "Erforschung, ob Ihre personenbezogenen Daten verarbeitet werden,"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "İşlenen kişisel verilerinizin amacına uygun kullanılıp kullanılmadığını öğrenme,"
+msgstr "Überprüfung, ob Ihre verarbeiteten personenbezogenen Daten zweckgerecht verwendet werden,"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini talep etme,"
+msgstr "Anforderung der Berichtigung Ihrer personenbezogenen Daten im Falle von Unvollständigkeit oder Fehlern,"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Kişisel verilerinizin silinmesini veya yok edilmesini talep etme."
+msgstr "Anforderung der Löschung oder Vernichtung Ihrer personenbezogenen Daten."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Açık Rıza Metni"
+msgstr "Einwilligungserklärung"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Kişisel verilerinizin Turist Memnuniyet İzleme Sistemi kapsamında işlenebilmesi için açık rızanızı talep ediyoruz. Bu proje kapsamında adınız, soyadınız, e-posta adresiniz ve telefon numaranız toplanmakta ve aşağıda belirtilen amaçlarla kullanılmaktadır:"
+msgstr "Wir bitten um Ihre ausdrückliche Zustimmung zur Verarbeitung Ihrer personenbezogenen Daten im Rahmen des Touristen-Zufriedenheitsüberwachungssystems. Im Rahmen dieses Projekts werden Ihr Name, Nachname, Ihre E-Mail-Adresse und Telefonnummer gesammelt und für die folgenden Zwecke verwendet:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "- Projemizin geliştirilmesi ve yarışma süreçlerinin yönetilmesi."
+msgstr "- Weiterentwicklung unseres Projekts und Verwaltung der Wettbewerbsprozesse."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Toplanan kişisel veriler, yarışma sona erdikten sonra 7 gün içinde kalıcı olarak silinecektir. Bu süreç boyunca verilerinizin korunması için gerekli tüm güvenlik önlemleri alınacaktır."
+msgstr "Die gesammelten personenbezogenen Daten werden innerhalb von 7 Tagen nach dem Ende des Wettbewerbs dauerhaft gelöscht. Alle erforderlichen Sicherheitsmaßnahmen zum Schutz Ihrer Daten werden während dieses Prozesses getroffen."
+
+
+
+
 #: .\surveyapp\templates\thanks.html:48
 msgid ""
 "We appreciate you taking the time to complete our survey. Your feedback is "

@@ -4,46 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/artificial-intelligence--v1.png">
     <title>YZ Tavsiyesi</title>
     <style>
-        .user_infos{
+        .user_infos {
             text-align: right;
-            margin-top: 15px;
-            margin-right: 25px;
-            padding: 25px;
+            margin: 15px 25px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 10px;
         }
         .header {
             margin-top: 25px;
             text-align: center;
-            font-size: 40px;
+            font-size: 2.5rem;
             font-weight: bold; 
+            color: #343a40;
         }
-        .textcontainer{
-            width: 50%; 
+        .textcontainer {
+            width: 50%;
             text-align: left;
             margin: auto;
             margin-top: 25px;
-            padding: auto;
-            display: flex;
+            padding: 20px;
+            background-color: #f7f8fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(128, 128, 128, 0.2);
         }
     </style>
 </head>
 <body>
-    <h1 class="header">A Noktasının Anketleri Sonucunda Yapay Zekanın Tavsiyesi</h1>
     <div class="user_infos">
-        <text>{{user.username}}</text>
-        <text>,</text>
-        <text>{{user.email}}</text>
-        <p></p>
-        <form method="post" action="{% url 'logout' %}?next=/login">
+        <h1 class="header">A Noktasının Anketleri Sonucunda Yapay Zekanın Tavsiyesi</h1>
+        <p>{{user.username}} | {{user.email}}</p>
+        
+        <button id="prompt_again" class="btn btn-outline-primary" style="margin-left: 10px;">Tekrar Tavsiye Oluştur</button>
+        
+        <button id="go_back" class="btn btn-outline-success" style="margin-left: 10px;">Anket Sonuçlarına Geri Dön</button>
+
+        <form method="post" action="{% url 'logout' %}?next=/login" style="display: inline;margin-left: 10px;">
             {% csrf_token %}
-            <button type="submit" class="btn btn-outline-danger" >Çıkış Yap</button>
+            <button type="submit" class="btn btn-outline-danger">Çıkış Yap</button>
         </form>
-        <p></p>
-        <button id="prompt_again" class="btn btn-outline-primary">Tekrar Tavsiye Oluştur</button>
-        <p></p>
-        <button id="go_back" class="btn btn-outline-success">Anket Sonuçlarına Geri Dön</button>
     </div>
+    
     <div class="textcontainer">{{ advice | safe }}</div>
 </body>
     <script>

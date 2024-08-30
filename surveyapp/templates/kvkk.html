@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KVKK Aydınlatma ve Açık Rıza Metni</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/terms-and-conditions.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        h1, h2, h3 {
+            color: #0066cc;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        
+        ul {
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+        
+        .info-section, .consent-section {
+            margin-bottom: 30px;
+        }
+        
+        label {
+            display: block;
+            margin: 15px 0;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        
+        .signature-section {
+            margin-top: 20px;
+        }
+        
+        .signature-section p {
+            margin: 10px 0;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            width: 60%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{% translate "Turist Memnuniyet İzleme Sistemi KVKK Aydınlatma ve Açık Rıza Metni" %}</h1>
+
+<section class="info-section">
+    <h2>{% translate "Aydınlatma Metni" %}</h2>
+    <p>{% translate "Değerli Katılımcı" %}</p>
+    <p>{% translate "Turist Memnuniyet İzleme Sistemi kapsamında kişisel verilerinizin korunmasına büyük önem veriyoruz. Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca, kişisel verilerinizin işlenme süreçleri hakkında sizi bilgilendirmek amacıyla hazırlanmıştır." %}</p>
+    
+    <h3>{% translate "Toplanan Kişisel Veriler:" %}</h3>
+    <p>{% translate "Bu proje kapsamında, adınız, soyadınız, e-posta adresiniz ve telefon numaranız gibi kişisel verileriniz toplanmaktadır. E-posta adresiniz ve telefon numaranız, sisteme `example@gmail.com` ve `+90 555 555 55 55` şeklinde kaydedilecektir." %}</p>
+
+    <h3>{% translate "Verilerin İşlenme Amacı:" %}</h3>
+    <p>{% translate "Toplanan kişisel verileriniz, projemizin geliştirilmesi ve yarışma süreçlerinin yönetilmesi amacıyla işlenecektir. Verileriniz, yalnızca bu amaçlar doğrultusunda kullanılacak olup, üçüncü şahıslarla paylaşılmayacaktır." %}</p>
+    
+    <h3>{% translate "Verilerin Saklanma Süresi:" %}</h3>
+    <p>{% translate "Kişisel verileriniz, yarışmanın sona erdiği tarihten itibaren 7 gün içinde kalıcı olarak silinecektir." %}</p>
+    
+    <h3>{% translate "Veri Güvenliği:" %}</h3>
+    <p>{% translate "Verilerinizin güvenliğini sağlamak için gerekli teknik ve idari önlemler alınmaktadır. Veriler, yetkisiz erişime karşı korunmaktadır." %}</p>
+    
+    <h3>{% translate "Katılımcı Hakları:" %}</h3>
+    <p>{% translate "KVKK kapsamında, kişisel verileriniz üzerinde aşağıdaki haklara sahipsiniz:" %}</p>
+    <ul>
+        <li>{% translate "Kişisel verilerinizin işlenip işlenmediğini öğrenme," %}</li>
+        <li>{% translate "İşlenen kişisel verilerinizin amacına uygun kullanılıp kullanılmadığını öğrenme," %}</li>
+        <li>{% translate "Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini talep etme," %}</li>
+        <li>{% translate "Kişisel verilerinizin silinmesini veya yok edilmesini talep etme." %}</li>
+    </ul>
+</section>
+
+<section class="consent-section">
+    <h2>{% translate "Açık Rıza Metni" %}</h2>
+    <p>{% translate "Değerli Katılımcı" %}</p>
+    <p>{% translate "Kişisel verilerinizin Turist Memnuniyet İzleme Sistemi kapsamında işlenebilmesi için açık rızanızı talep ediyoruz. Bu proje kapsamında adınız, soyadınız, e-posta adresiniz ve telefon numaranız toplanmakta ve aşağıda belirtilen amaçlarla kullanılmaktadır:" %}</p>
+    <p>{% translate "- Projemizin geliştirilmesi ve yarışma süreçlerinin yönetilmesi." %}</p>
+    <p>{% translate "Toplanan kişisel veriler, yarışma sona erdikten sonra 7 gün içinde kalıcı olarak silinecektir. Bu süreç boyunca verilerinizin korunması için gerekli tüm güvenlik önlemleri alınacaktır." %}</p>
+</section>
+</body>
+</html>

@@ -4,6 +4,7 @@
 
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="https://img.icons8.com/fluency/48/checked.png">
 	<meta charset="UTF-8">
 	<title>{% translate "A Noktası Anketi" %}</title>
 	<style>
@@ -276,7 +277,7 @@
 			</label>
 
 			<!-- Input Type Text -->
-			<input type="text" id="name" name="name"/>
+			<input type="text" id="name" name="name" required/>
 		</div>
 		
 
@@ -286,7 +287,7 @@
 			</label>
 
 			<!-- Input Type Email-->
-			<input type="email" id="email" name="email"/>
+			<input type="email" id="email" name="email" required/>
 		</div>
 
 		<div class="form-control">
@@ -296,7 +297,7 @@
 
 			<!-- Input Type Text -->
 			<input type="text" id="phone" minlength="10" name = "phone"
-				placeholder="(+90 555-555-5555)" />
+				placeholder="(+90 555-555-5555)" required />
 		</div>
 		<h2>{% translate "From 1 to 5 stars" %}</h2>
 
@@ -305,15 +306,15 @@
 				{% translate "Sanitation"%}
 			</label>
 			<div class="star-rating">
-				<input class="star" id="star-5" type="radio" name="rateClean" value="5"/>
+				<input class="star" id="star-5" type="radio" name="rateClean" value="5" required/>
 				<label class="star" for="star-5"></label>
-				<input class="star" id="star-4" type="radio" name="rateClean" value="4"/>
+				<input class="star" id="star-4" type="radio" name="rateClean" value="4" required/>
 				<label class="star" for="star-4"></label>
-				<input class="star" id="star-3" type="radio" name="rateClean" value="3"/>
+				<input class="star" id="star-3" type="radio" name="rateClean" value="3" required/>
 				<label class="star" for="star-3"></label>
-				<input class="star" id="star-2" type="radio" name="rateClean" value="2"/>
+				<input class="star" id="star-2" type="radio" name="rateClean" value="2" required/>
 				<label class="star" for="star-2"></label>
-				<input class="star" id="star-1" type="radio" name="rateClean" value="1"/>
+				<input class="star" id="star-1" type="radio" name="rateClean" value="1" required/>
 				<label class="star" for="star-1"></label>
 			  </div>
 		</div>
@@ -323,15 +324,15 @@
 				{% translate "Politeness of The Staff" %}
 			</label>
 			<div class="star-rating">
-				<input class="star" id="star-56" type="radio" name="ratePolite" value="5"/>
+				<input class="star" id="star-56" type="radio" name="ratePolite" value="5" required/>
 				<label class="star" for="star-56"></label>
-				<input class="star" id="star-46" type="radio" name="ratePolite" value="4"/>
+				<input class="star" id="star-46" type="radio" name="ratePolite" value="4" required/>
 				<label class="star" for="star-46"></label>
-				<input class="star" id="star-36" type="radio" name="ratePolite" value="3"/>
+				<input class="star" id="star-36" type="radio" name="ratePolite" value="3" required/>
 				<label class="star" for="star-36"></label>
-				<input class="star" id="star-26" type="radio" name="ratePolite" value="2"/>
+				<input class="star" id="star-26" type="radio" name="ratePolite" value="2" required/>
 				<label class="star" for="star-26"></label>
-				<input class="star" id="star-16" type="radio" name="ratePolite" value="1"/>
+				<input class="star" id="star-16" type="radio" name="ratePolite" value="1" required/>
 				<label class="star" for="star-16"></label>
 			  </div>
 		</div>
@@ -341,15 +342,15 @@
 				{% translate "Food Quality" %}
 			</label>
 			<div class="star-rating">
-				<input class="star" id="star-57" type="radio" name="rateFood" value="5"/>
+				<input class="star" id="star-57" type="radio" name="rateFood" value="5" required/>
 				<label class="star" for="star-57"></label>
-				<input class="star" id="star-47" type="radio" name="rateFood" value="4"/>
+				<input class="star" id="star-47" type="radio" name="rateFood" value="4" required/>
 				<label class="star" for="star-47"></label>
-				<input class="star" id="star-37" type="radio" name="rateFood" value="3"/>
+				<input class="star" id="star-37" type="radio" name="rateFood" value="3" required/>
 				<label class="star" for="star-37"></label>
-				<input class="star" id="star-27" type="radio" name="rateFood" value="2"/>
+				<input class="star" id="star-27" type="radio" name="rateFood" value="2" required/>
 				<label class="star" for="star-27"></label>
-				<input class="star" id="star-17" type="radio" name="rateFood" value="1"/>
+				<input class="star" id="star-17" type="radio" name="rateFood" value="1" required/>
 				<label class="star" for="star-17"></label>
 			  </div>
 		</div>
@@ -361,17 +362,17 @@
 			<!-- Input Type Radio Button -->
 			<label for="recommed-1">
 				<input type="radio" id="recommed-1" value = "5"
-					name="recommed">{% translate "Yes" %}
+					name="recommed" required>{% translate "Yes" %}
 				</input>
 			</label>
 			<label for="recommed-2">
 				<input type="radio" id="recommed-2" value = "1"
-					name="recommed">{% translate "No" %}
+					name="recommed" required>{% translate "No" %}
 				</input>
 			</label>
 			<label for="recommed-3">
 				<input type="radio" id="recommed-3" value = "3"
-					name="recommed">{% translate "Maybe" %}
+					name="recommed" required>{% translate "Maybe" %}
 				</input>
 			</label>
 		</div>
@@ -429,9 +430,16 @@
             </label>
 
             <!-- multi-line text input control -->
-            <textarea name="comment" id="comment" placeholder="{% translate "Enter your comment here" %}" cols="20" rows="5"></textarea>
+            <textarea name="comment" id="comment" placeholder="{% translate "Enter your comment here" %}" cols="20" rows="5" required></textarea>
         </div>
-
+		<div class="form-control">
+			<label for="kvkk" id="label-kvkk">
+				{% translate "I consent to the processing of my personal data within the scope of the Tourist Satisfaction Monitoring System and to the deletion of this data after the competition ends."%}
+			</label>
+			<input type="checkbox" id="kvkk" name="kvkk" required />
+			{% get_current_language as LANGUAGE_CODE %}
+			<a href="/{{LANGUAGE_CODE}}/kvkk" target="_blank">{% translate "Read the KVKK Information"%}</a>
+		</div>		
 		<!-- Multi-line Text Input Control -->
 		<button type="submit" value="submit">
 			{% translate "Submit" %}

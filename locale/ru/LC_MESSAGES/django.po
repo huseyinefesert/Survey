@@ -201,6 +201,106 @@ msgstr "Спасибо"
 msgid "Thank You!"
 msgstr "Спасибо"
 
+#: .\surveyapp\templates\mainpage.html
+#: .\surveyapp\templates\mainpage2.html
+msgid "I consent to the processing of my personal data within the scope of the Tourist Satisfaction Monitoring System and to the deletion of this data after the competition ends."
+msgstr "Я даю согласие на обработку моих персональных данных в рамках Системы мониторинга удовлетворенности туристов и на удаление этих данных после окончания конкурса."
+
+#: .\surveyapp\templates\mainpage.html
+#: .\surveyapp\templates\mainpage2.html
+msgid "Read the KVKK Information"
+msgstr "Прочитайте информацию о KVKK"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Turist Memnuniyet İzleme Sistemi KVKK Aydınlatma ve Açık Rıza Metni"
+msgstr "Информационное и согласительное сообщение KVKK для системы мониторинга удовлетворенности туристов"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Aydınlatma Metni"
+msgstr "Информационное сообщение"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Değerli Katılımcı"
+msgstr "Уважаемый участник"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Turist Memnuniyet İzleme Sistemi kapsamında kişisel verilerinizin korunmasına büyük önem veriyoruz. Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca, kişisel verilerinizin işlenme süreçleri hakkında sizi bilgilendirmek amacıyla hazırlanmıştır."
+msgstr "В рамках системы мониторинга удовлетворенности туристов мы придаем большое значение защите ваших персональных данных. Этот документ создан для информирования вас о процессах обработки ваших персональных данных в соответствии с Законом № 6698 о защите персональных данных (KVKK)."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Toplanan Kişisel Veriler:"
+msgstr "Собранные персональные данные:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Bu proje kapsamında, adınız, soyadınız, e-posta adresiniz ve telefon numaranız gibi kişisel verileriniz toplanmaktadır. E-posta adresiniz ve telefon numaranız, sisteme `example@gmail.com` ve `+90 555 555 55 55` şeklinde kaydedilecektir."
+msgstr "В рамках этого проекта собираются персональные данные, такие как ваше имя, фамилия, адрес электронной почты и номер телефона. Ваш адрес электронной почты и номер телефона будут сохранены в системе как `example@gmail.com` и `+90 555 555 55 55`."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Verilerin İşlenme Amacı:"
+msgstr "Цель обработки данных:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Toplanan kişisel verileriniz, projemizin geliştirilmesi ve yarışma süreçlerinin yönetilmesi amacıyla işlenecektir. Verileriniz, yalnızca bu amaçlar doğrultusunda kullanılacak olup, üçüncü şahıslarla paylaşılmayacaktır."
+msgstr "Собранные персональные данные будут обработаны для развития нашего проекта и управления процессами конкурса. Ваши данные будут использоваться исключительно для этих целей и не будут передаваться третьим лицам."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Verilerin Saklanma Süresi:"
+msgstr "Срок хранения данных:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Kişisel verileriniz, yarışmanın sona erdiği tarihten itibaren 7 gün içinde kalıcı olarak silinecektir."
+msgstr "Ваши персональные данные будут безвозвратно удалены в течение 7 дней после окончания конкурса."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Veri Güvenliği:"
+msgstr "Безопасность данных:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Verilerinizin güvenliğini sağlamak için gerekli teknik ve idari önlemler alınmaktadır. Veriler, yetkisiz erişime karşı korunmaktadır."
+msgstr "Приняты все необходимые технические и административные меры для обеспечения безопасности ваших данных. Данные защищены от несанкционированного доступа."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Katılımcı Hakları:"
+msgstr "Права участников:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "KVKK kapsamında, kişisel verileriniz üzerinde aşağıdaki haklara sahipsiniz:"
+msgstr "В рамках KVKK вы имеете следующие права на свои персональные данные:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Kişisel verilerinizin işlenip işlenmediğini öğrenme,"
+msgstr "Узнать, обрабатываются ли ваши персональные данные,"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "İşlenen kişisel verilerinizin amacına uygun kullanılıp kullanılmadığını öğrenme,"
+msgstr "Узнать, используются ли обработанные персональные данные в соответствии с их назначением,"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini talep etme,"
+msgstr "Потребовать исправления ваших персональных данных в случае их неполноты или ошибок,"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Kişisel verilerinizin silinmesini veya yok edilmesini talep etme."
+msgstr "Потребовать удаления или уничтожения ваших персональных данных."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Açık Rıza Metni"
+msgstr "Заявление о согласии"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Kişisel verilerinizin Turist Memnuniyet İzleme Sistemi kapsamında işlenebilmesi için açık rızanızı talep ediyoruz. Bu proje kapsamında adınız, soyadınız, e-posta adresiniz ve telefon numaranız toplanmakta ve aşağıda belirtilen amaçlarla kullanılmaktadır:"
+msgstr "Мы просим ваше явное согласие на обработку ваших персональных данных в рамках системы мониторинга удовлетворенности туристов. В рамках этого проекта собираются ваше имя, фамилия, адрес электронной почты и номер телефона и используются для следующих целей:"
+
+#: .\surveyapp\templates\kvkk.html
+msgid "- Projemizin geliştirilmesi ve yarışma süreçlerinin yönetilmesi."
+msgstr "- Развитие нашего проекта и управление конкурсными процессами."
+
+#: .\surveyapp\templates\kvkk.html
+msgid "Toplanan kişisel veriler, yarışma sona erdikten sonra 7 gün içinde kalıcı olarak silinecektir. Bu süreç boyunca verilerinizin korunması için gerekli tüm güvenlik önlemleri alınacaktır."
+msgstr "Собранные персональные данные будут безвозвратно удалены в течение 7 дней после окончания конкурса. Все необходимые меры по защите ваших данных будут приняты в течение этого процесса."
+
+
+
 #: .\surveyapp\templates\thanks.html:48
 msgid ""
 "We appreciate you taking the time to complete our survey. Your feedback is "

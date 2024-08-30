@@ -16,4 +16,5 @@ urlpatterns = [
     path("admin_page_B/", views.chart_B, name='admin_main2'),
     path("results_A", views.get_advice_A, name='result_A'),
     path("results_B", views.get_advice_B, name='result_B'),
+    path("kvkk", views.get_kvkk, name='kvkk'),
 ]
