@@ -206,8 +206,8 @@ def survey_A(request):
     if request.method == "POST":
         result = request.POST.getlist("inp")
         name = request.POST.get("name")
-        email = request.POST.get("email")
-        phone = request.POST.get("phone")
+        email = "example@gmail.com"
+        phone = "5555555555"
         clean = request.POST.get("rateClean")
         polite = request.POST.get("ratePolite")
         food = request.POST.get("rateFood")
@@ -222,8 +222,8 @@ def survey_B(request):
     if request.method == "POST":
         result = request.POST.getlist("inp")
         name = request.POST.get("name")
-        email = request.POST.get("email")
-        phone = request.POST.get("phone")
+        email = "example@gmail.com"
+        phone = "5555555555"
         clean = request.POST.get("rateClean")
         polite = request.POST.get("ratePolite")
         vent = request.POST.get("rateVent")

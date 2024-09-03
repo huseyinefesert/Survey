@@ -211,10 +211,7 @@ msgstr "Teşekkürler!"
 msgid ""
 "We appreciate you taking the time to complete our survey. Your feedback is "
 "valuable to us and will help us improve our services."
-msgstr ""
-"Anketimizi tamamladığınız için zaman ayırdığınız için teşekkür ederiz. Geri "
-"bildiriminiz bizim için değerlidir ve hizmetlerimizi geliştirmemize yardımcı "
-"olacaktır."
+msgstr "Anketimizi doldurmak için zaman ayırdığınız için teşekkür ederiz. Geri bildirimleriniz bizim için değerlidir ve hizmetlerimizi geliştirmemize yardımcı olacaktır."
 
 #: .\surveyapp\templates\kvkk.html
 msgid "Turist Memnuniyet İzleme Sistemi KVKK Aydınlatma ve Açık Rıza Metni"
